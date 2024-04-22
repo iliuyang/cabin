@@ -3,7 +3,7 @@ import {defineConfig} from "vitepress";
 import {set_sidebar} from "../guide/set_sidebar.mjs";
 
 export default defineConfig({
-	base: "/",//部署到GitHub Pages时的仓库名 vitepress-template
+	base: "/cabin",//部署到GitHub Pages时的仓库名 vitepress-template
 	title: "记录文档",
 	lang: "zh-CN",
 	description: "记录文档",
