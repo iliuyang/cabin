@@ -8,8 +8,8 @@ hero:
   name: 学习笔记
   text: 前端学习笔记
   tagline: 用于记录
-  image:
-    src: /home.png
+  icon:
+    src: /Animated-Gradient-Ghost.svg
 features:
   - icon: 🔥
     title: 特点1

@@ -40,7 +40,7 @@ function getList(params, path1, pathname, ifSort, collapsed, sortOrder) {
 	// 开始遍历params
 	for (let file of params) {
 		// 获取文件或文件夹的映射名称，如果存在
-		const mappedName = nameMappings[file] || file;
+		const mappedName = nameMappings[file] ;
 		// 拼接目录
 		const dir = path.join(path1, file);
 		// 判断是否是文件夹
@@ -58,7 +58,7 @@ function getList(params, path1, pathname, ifSort, collapsed, sortOrder) {
 			if (ifSort) items = items.sort(sortItemsByText);
 			// else items = items.reverse();
 			res.push({
-				text: mappedName,
+				text: mappedName || file,
 				collapsible: true,
 				collapsed: collapsed,
 				items: items,
@@ -75,7 +75,7 @@ function getList(params, path1, pathname, ifSort, collapsed, sortOrder) {
 			name = name.replace(suffix, '');
 			// 添加到结果
 			res.push({
-				text: mappedName,
+				text: mappedName || name,
 				link: `${pathname}/${name}`,
 			});
 		}
